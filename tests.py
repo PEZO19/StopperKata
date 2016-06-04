@@ -1,15 +1,6 @@
 import unittest
 
-
-class Stopper(object):
-    def start(self):
-        pass
-
-    def stop(self):
-        pass
-
-    def get_elapsed_time(self):
-        pass
+from Stopper import Stopper
 
 
 class StopperTest(unittest.TestCase):
