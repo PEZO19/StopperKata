@@ -1,5 +1,7 @@
 import unittest
 
+import time
+
 from Stopper import Stopper
 
 
@@ -37,3 +39,10 @@ class StopperTest(unittest.TestCase):
         stopper = Stopper()
         stopper.stop()
         self.assertEqual(stopper.get_elapsed_sec(), 0)
+
+    def test__0point5sec_between_startstop__elapsed_1sec(self):
+        stopper = Stopper()
+        stopper.start()
+        time.sleep(0.5)
+        stopper.stop()
+        self.assertEqual(stopper.get_elapsed_sec(), 1)
