@@ -15,3 +15,8 @@ class StopperTest(unittest.TestCase):
         stopper = Stopper()
         elapsed_time = stopper.get_elapsed_time()
         self.assertTrue( isinstance(elapsed_time, int) )
+
+    def test__nostart_nostop__elapsed_0(self):
+        stopper = Stopper()
+        elapsed_time = stopper.get_elapsed_time()
+        self.assertEqual( elapsed_time, 0)
