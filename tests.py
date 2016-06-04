@@ -32,3 +32,8 @@ class StopperTest(unittest.TestCase):
         stopper.stop()
         elapsed_time = stopper.get_elapsed_time()
         self.assertEqual( elapsed_time, 0)
+
+    def test__no_time_between_startstop__elapsed_0sec(self):
+        stopper = Stopper()
+        stopper.stop()
+        self.assertEqual( stopper.get_elapsed_time(), 0 )
