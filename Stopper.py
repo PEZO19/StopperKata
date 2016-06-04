@@ -5,5 +5,5 @@ class Stopper(object):
     def stop(self):
         pass
 
-    def get_elapsed_time(self):
+    def get_elapsed_sec(self):
         return 0
