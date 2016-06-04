@@ -6,4 +6,4 @@ class Stopper(object):
         pass
 
     def get_elapsed_time(self):
-        pass
+        return 0
